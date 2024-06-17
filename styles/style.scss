@@ -1,12 +1,6 @@
-@keyframes navigation-hover {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 80%;
-    }
-}
+$primary-color: #00a8fb;
+$secondary-color: #feb032;
+@import "main-section.scss";
 
 * {
     margin: 0;
@@ -30,12 +24,14 @@ body {
 }
 
 header {
-    position: absolute;
+    position: sticky;
     height: 75px;
     width: 100%;
-    color: #00a8fb;
+    color: $primary-color;
     top: 0;
     left: 0;
+    z-index: 999;
+    background-color: #fff;
 }
 
 header > .container {
@@ -92,12 +88,14 @@ li {
         bottom: 15px;
         right: 10%;
         height: 3px;
-        background-color: #00a8fb;
+        background-color: $primary-color;
+        opacity: .5;
         width: 0;
-        transition: width .3s;
+        transition: .3s;
     }
     &:hover::before{
         width: 80%;
+        opacity: 1;
     }
 }
 
@@ -111,3 +109,4 @@ h2 {
     letter-spacing: 1.7px;
     text-transform: uppercase;
 }
+

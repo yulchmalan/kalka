@@ -1,0 +1,61 @@
+.main-section {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background-color: $primary-color;
+    color: #fff;
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    p {
+        font-size: 24px;
+    }
+    img {
+        position: absolute;
+        bottom: 75px;
+        right: 15%;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: url(../images/waves/wave.svg) center no-repeat;
+        background-size: cover;
+    }
+}
+
+h3 {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 900;
+
+    text-shadow: 2px 0 #fff,
+                0 -1px #fff;
+}
+
+.button {
+    margin: 20px 0;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 32px;
+    background-color: $secondary-color;
+    box-shadow: 0px 2px 0px 0px rgba(160,130,57,1);
+    &:hover {
+        position: relative;
+        transform: translateY(-10px);
+        transition: 1s;
+    }
+}
+
+.half-opacity {
+    opacity: .5;
+}
